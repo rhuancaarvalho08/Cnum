@@ -40,16 +40,25 @@ println(r2)
 
 
 
-f3(x) = 5*sin(x^2) - MathConstants.e^(x/10)
+f3(x) = ((10^-12)*(MathConstants.e^((x*(1.60217663*10^-19))/((1.380649*10^-23)*(300)))-1))+x-30
 
 error = 10^-3
 
+r3 = bisection(-1,1,f3)
+println(r3)
 
-r2 = bisection(0,1,f2)
-println(r2)
 
-r2 = bisection(0.5,2,f2)
-println(r2)
+f3(x) = ((10^-12)*(MathConstants.e^((x*(1.60217663*10^-19))/((1.380649*10^-23)*(300)))-1))+x-3
 
-r2 = bisection(2.5,2.7,f2)
-println(r2)
+error = 10^-3
+
+r3 = bisection(0.72,0.75,f3)
+println(r3)
+
+3(x) = 10*(((10^-12)*(MathConstants.e^((x*(1.60217663*10^-19))/((1.380649*10^-23)*(300)))-1))+x-3)
+
+error = 10^-3
+
+r3 = bisection(0.72,0,f3)
+println(r3)
+
