@@ -11,7 +11,7 @@ function fixedpoint(a,g, error)
   return x
 end
 #Exercício 3.3.1
-g(x)=MathConstants.e^(x)-2
+g(x)=MathConstants.e^(x)-2.
 
 r = fixedpoint(-1.8,g, error)
 println(r)
