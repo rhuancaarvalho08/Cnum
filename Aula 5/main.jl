@@ -1,10 +1,10 @@
 using LinearAlgebra
 
-A = [1 1 1 ;
-     4 4 2 ;
+A = [1 1 1;
+     4 4 2;
      2 1 -1]
 
-B = [1; 2; 0]
+B = [1 ; 2 ; 0]
 
 x = A \ B
 println(x)
@@ -26,15 +26,10 @@ function jacobi(A, B, k, error)
     if norm(X-K) < error
       break
     end
-    X=copy(K)
+    X = copy(K)
   end
   return X
 end
-
-error = 10^-3
-
-x = jacobi(A, B, 10, error)
-println(x)
 
 function seidel(A, B, k, error)
   n = size(B,1)
@@ -59,6 +54,19 @@ function seidel(A, B, k, error)
   return X
 end
 
+error = 10^-3
 
-X = seidel(A, B, 100, error)
-println(X)
+x = jacobi(A,B,10,error)
+println(x)
+
+A = [2 1 -1;
+     4 4 2;
+     1 1 1]
+
+B = [0 ; 2 ; 1]
+
+x = jacobi(A,B,100,error)
+println(x)
+
+x = seidel(A,B,100,error)
+println(x)
